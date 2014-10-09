@@ -82,7 +82,7 @@ Vous devez donc avoir à la fin de cette étape un projet vide (contenant unique
 * Vous pouvez ensuite ouvrir le dossier en entier avec Sublime Text par exemple pour voir ces mêmes fichiers et dossiers.
 * Enfin, vous allez lancer votre serveur rails en local avec la commande `rails server` ou `rails s` dans sa version courte (toujours depuis la racine de votre projet). Allez ensuite sur `http://localhost:3000` avec votre navigateur. Vous devez obtenir ça :
 
-![Welcome Aboard Rails](images/aboard.png =600x "Welcome Aboard Rails")
+<img src="images/aboard.png" alt="Welcome Aboard Rails" style="width:600px">
 
 
 #### Etape 3 : Création d'un Hello World
@@ -115,7 +115,7 @@ Comme on peu le voir en dessous, cette commande va générer un certain nombre d
 
 On peut ensuite voir ceci en allant sur notre adresse [http://localhost:3000](http://localhost:3000)
 
-![Home index](images/home_index.png =300x "Home index")
+<img src="images/home_index.png" alt="Home index" style="width:300px">
 
 * Vous pouvez maintenant modifier la vue correspondante pour obtenir un (joli) `Hello World` à la place de ce `Home#index` en éditant le fichier `index.html.erb`
 
