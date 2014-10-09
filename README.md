@@ -82,7 +82,7 @@ Vous devez donc avoir à la fin de cette étape un projet vide (contenant unique
 * Vous pouvez ensuite ouvrir le dossier en entier avec Sublime Text par exemple pour voir ces mêmes fichiers et dossiers.
 * Enfin, vous allez lancer votre serveur rails en local avec la commande `rails server` ou `rails s` dans sa version courte (toujours depuis la racine de votre projet). Allez ensuite sur `http://localhost:3000` avec votre navigateur. Vous devez obtenir ça :
 
-![Welcome Aboard Rails](https://photos-5.dropbox.com/t/1/AAADFZoKCDHyU7NpLqUGAJdd3SuU5Ag0DaBVi2_a3clmlA/12/13814809/png/1024x768/3/1412287200/0/2/Screenshot%202014-10-02%2022.29.48.png/OhlolFndE-Ta-JLubg6oalSmprCoJukhXSDEe9rgoV4 =600x "Welcome Aboard Rails")
+![Welcome Aboard Rails](images/aboard.png =600x "Welcome Aboard Rails")
 
 
 #### Etape 3 : Création d'un Hello World
@@ -115,7 +115,7 @@ Comme on peu le voir en dessous, cette commande va générer un certain nombre d
 
 On peut ensuite voir ceci en allant sur notre adresse [http://localhost:3000](http://localhost:3000)
 
-![Home index](https://photos-2.dropbox.com/t/1/AAAwAbPLF06OTVMurNLFKUXNu-u8Xs6DoqqaQ1CzR3ZuwQ/12/13814809/png/1024x768/3/1412287200/0/2/Screenshot%202014-10-02%2022.55.15.png/Zwsodnf235wKlJUnwF2u1GjdavT9-y0NfNBCig1v4m4 =300x "Home index")
+![Home index](images/home_index.png =300x "Home index")
 
 * Vous pouvez maintenant modifier la vue correspondante pour obtenir un (joli) `Hello World` à la place de ce `Home#index` en éditant le fichier `index.html.erb`
 
