@@ -58,6 +58,25 @@ Ouvrez un Terminal / une console, et pour tester que tout est installé vous pou
 
 Le test est validé si à chaque fois un numéro de version s'affiche (même si il n'est pas identique à celui présenté ici) et échoue si vous voyez une réponse du type `command not found`. Si c'est le cas assurez vous que vous n'avez pas oublié une des étapes décrites ci-dessus.
 
+### Les proxys de l'X
+
+NB : N'étant pas dans vos kazerts, cette partie est expérimentale. Tout retour de votre part sur ces commandes sera grandement appréciée
+
+Pour Git, si vous êtes à l'X vous devez :
+
+	$ git config --global http.proxy http://kuzh.polytechnique.fr:8080
+	$ git config --global https.proxy http://kuzh.polytechnique.fr:8080
+	
+Pour les retirer (en dehors de l'X) :
+
+	$ git config --global --unset http.proxy
+	$ git config --global --unset https.proxy
+	
+Pour Rubygems / Bundle, à tenter :
+
+	$ export http_proxy=http://kuzh.polytechnique.fr:8080 // (sur mac)
+	$ SET http_proxy=http://kuzh.polytechnique.fr:8080    // (sur windows)
+
 
 # Workshop
 
