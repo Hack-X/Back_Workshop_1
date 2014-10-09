@@ -7,24 +7,14 @@ Objectifs de l'atelier :
 * Découvrir des tutoriaux
 * Réaliser un `Hello World !`
 
-Pour la partie serveur, nous utiliserons ces technologies :
+Dans ce premier atelier, nous utiliserons les technologies suivantes :
 
 * Ruby
-* Rails
+* Rails (un framework basé sur Ruby)
 * Git
-* SQLite3 / MySQL / PostgreSQL
 
 
-
-# Ressources
-
-#### Tutoriaux
-
-Le tutoriel le plus simple est complet est la documentation officielle de Rails : [http://guides.rubyonrails.org/getting_started.html
-](http://guides.rubyonrails.org/getting_started.html)
-
-
-# Prérequis & Installation
+# Installation de l'environnement de travail
 
 
 ### Installation de Rails & Ruby
@@ -41,12 +31,14 @@ Comme vu lors du cours d'introduction, Git sera utilisé en permanence pour **ve
 
 Nous utiliserons **GitHub** comme serveur de Git en profitant de l'offre gratuite pour les comptes open sources.
 
-Avant de commencer, il faudra donc :
+Vous pouvez donc dès maintenant :
 
 * Vous créer un compte sur Github
+* Installer un client git si vous n'en avez pas déjà un (si vous êtes passés par railsinstaller pour Windows ça devrait être bon), par exemple celui proposé par GitHub pour [**Windows**](http://windows.github.com/) ou [**Mac**](http://mac.github.com/)
 * Vous pourrez ensuite créer une __organization__ sur Github qui correspondra à votre groupe (__Workshop-Polytechnique__ dans cet exemple).
 
-N'hésitez pas à aller sur cette petite application interactive pour vous former à Git & Github : [http://try.github.io](http://try.github.io)
+Bien qu'il existe des interfaces graphiques pour Git, nous vous conseillons d'utiliser git en ligne de commande afin de bien comprendre comment ça marche (utilisez donc git shell ou bash sous windows).
+Allez maintenant faire un tour sur cette petite application interactive pour vous former à Git & Github : [http://try.github.io](http://try.github.io)
 
 ### Editeur de code
 
@@ -54,7 +46,7 @@ Il vous faudra un IDE ou éditeur de code tout au long de ce cours. Le plus simp
 
 ### Avant de commencer
 
-Vous devez donc avoir accès à un Terminal / une console, et pour tester que tout est installé vous pouvez réaliser ces petits tests.
+Ouvrez un Terminal / une console, et pour tester que tout est installé vous pouvez réaliser ces petits tests:
 
     $ git --version
     git version 1.9.3 (Apple Git-50)
@@ -63,21 +55,22 @@ Vous devez donc avoir accès à un Terminal / une console, et pour tester que to
     $ rails --version
     Rails 4.1.6
 
-Le test est validé si à chaque fois un numéro de version s'affiche (même si il n'est pas identique à celui présenté ici) et échoue si vous une réponse du type `command not found`
+
+Le test est validé si à chaque fois un numéro de version s'affiche (même si il n'est pas identique à celui présenté ici) et échoue si vous voyez une réponse du type `command not found`. Si c'est le cas assurez vous que vous n'avez pas oublié une des étapes décrites ci-dessus.
 
 
 # Workshop
 
 #### Etape 1 : Création d'un projet sur Github
 
-* Création d'un **repository** sur Github avec un fichier Readme (comme celui là)
-* Cloner le projet sur sa machine avec la commande `git clone`
+* Depuis github.com, créez un nouveau **repository** avec un simple fichier Readme (comme celui là)
+* Clonez ce projet sur votre machine avec la commande `git clone` avec comme argument l'url de votre repository
 
-Vous devez donc avoir à la fin de cette étape le projet quasiment vide sur votre machine.
+Vous devez donc avoir à la fin de cette étape un projet vide (contenant uniquement un fichier readme et un répertoire .git) sur votre machine.
 
 #### Etape 2 : Génération d'une première application rails
 
-* A l'intérieur du projet, vous allez générer l'application avec la commande `rails new .` : cela va créaer une application qui aura le même nom que votre dossier courant (ici Cours_1). Cette commande va générer un certain nombre de fichiers et dossier.
+* Depuis un terminal ouvert à la racine de votre projet, générez l'application avec la commande `rails new .` : cela va créer une application qui aura le même nom que votre dossier courant (ici Cours_1). Cette commande va générer un certain nombre de fichiers et dossiers:
 
 
         $ ls
@@ -86,8 +79,8 @@ Vous devez donc avoir à la fin de cette étape le projet quasiment vide sur vot
         README.md    app          config.ru    log          tmp
 
 
-* Vous pouvez ensuite ouvrir le dossier en entier avec Sublime Text par exemple pour voir ces mêmes dossiers.
-* Enfin, vous allez lancer votre serveur rails en local avec la commande `rails server` ou `rails s` dans sa version courte. Allez ensuite sur `http://localhost:3000` avec votre navigateur. Vous devez obtenir ça :
+* Vous pouvez ensuite ouvrir le dossier en entier avec Sublime Text par exemple pour voir ces mêmes fichiers et dossiers.
+* Enfin, vous allez lancer votre serveur rails en local avec la commande `rails server` ou `rails s` dans sa version courte (toujours depuis la racine de votre projet). Allez ensuite sur `http://localhost:3000` avec votre navigateur. Vous devez obtenir ça :
 
 ![Welcome Aboard Rails](https://photos-5.dropbox.com/t/1/AAADFZoKCDHyU7NpLqUGAJdd3SuU5Ag0DaBVi2_a3clmlA/12/13814809/png/1024x768/3/1412287200/0/2/Screenshot%202014-10-02%2022.29.48.png/OhlolFndE-Ta-JLubg6oalSmprCoJukhXSDEe9rgoV4 =600x "Welcome Aboard Rails")
 
@@ -118,13 +111,13 @@ Comme le message de Rails nous y invite, nous allons créer 3 éléments pour r�
 
 Comme on peu le voir en dessous, cette commande va générer un certain nombre de dossiers et fichiers dont 2 nous intéressent particulièrement : le controller `app/controllers/home_controller.rb` et la vue correspondante `app/views/home/index.html.erb`.
 
-* Il faut ensuite créer une **route** comme nous invite rails, qui va diriger l'adresse http://localhost:3000/ (notre route root sans mauvais jeux de mots) en allant ajouter la ligne `root 'home#index'` au fichier `config/routes.rb`
+* Il faut ensuite créer une **route** comme nous invite rails, qui va rediriger l'adresse http://localhost:3000/ (notre route "root" sans mauvais jeux de mots) vers la vue correspondante. Pour ce faire, ajoutez la ligne `root 'home#index'` au fichier `config/routes.rb`
 
 On peut ensuite voir ceci en allant sur notre adresse [http://localhost:3000](http://localhost:3000)
 
 ![Home index](https://photos-2.dropbox.com/t/1/AAAwAbPLF06OTVMurNLFKUXNu-u8Xs6DoqqaQ1CzR3ZuwQ/12/13814809/png/1024x768/3/1412287200/0/2/Screenshot%202014-10-02%2022.55.15.png/Zwsodnf235wKlJUnwF2u1GjdavT9-y0NfNBCig1v4m4 =300x "Home index")
 
-* Vous allez maintenant allez modifier la vue correspondante pour obtenir un (joli) `Hello World` à la place de ce `Home#index`
+* Vous pouvez maintenant modifier la vue correspondante pour obtenir un (joli) `Hello World` à la place de ce `Home#index` en éditant le fichier `index.html.erb`
 
 
 #### Etape 4 : Push du projet sur Github
@@ -135,9 +128,19 @@ On peut ensuite voir ceci en allant sur notre adresse [http://localhost:3000](ht
         $ git commit -m 'mon tout premier commit'
         $ git push
 
-
+Si vous retournez sur github.com dans votre repository, vous verrez tous les fichiers que vous avez créé depuis le clonage de votre projet.
 
 Bravo, vous avez réussi !
+
+
+# Ressources
+
+#### Tutoriaux
+
+Le tutoriel le plus simple et complet est la documentation officielle de Rails : [http://guides.rubyonrails.org/getting_started.html
+](http://guides.rubyonrails.org/getting_started.html)
+Nous vous conseillons de passer du temps dessus arpès avoir suivi ce premier atelier
+
 
 
 
