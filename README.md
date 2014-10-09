@@ -62,10 +62,6 @@ Vous devez donc avoir accès à un Terminal / une console, et pour tester que to
     ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
     $ rails --version
     Rails 4.1.6
-    $ mysql --version
-    mysql  Ver 14.14 Distrib 5.6.20, for osx10.10 (x86_64) using  EditLine wrapper
-    $ sqlite3 --version
-    3.7.13 2012-07-17 17:46:21 65035912264e3acbced5a3e16793327f0a2f17bb
 
 Le test est validé si à chaque fois un numéro de version s'affiche (même si il n'est pas identique à celui présenté ici) et échoue si vous une réponse du type `command not found`
 
