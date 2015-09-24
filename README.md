@@ -19,6 +19,7 @@ Dans ce premier atelier, nous utiliserons les technologies suivantes :
 
 ### Installation de Rails & Ruby
 
+* Bitnami : [https://bitnami.com/stack/ruby/installer](https://bitnami.com/stack/ruby/installer)
 * Windows : [http://railsinstaller.org/](http://railsinstaller.org/)
 * Mac : [https://github.com/tokaido/tokaidoapp](https://github.com/tokaido/tokaidoapp)
 
