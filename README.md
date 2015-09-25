@@ -21,7 +21,7 @@ Dans ce premier atelier, nous utiliserons les technologies suivantes :
 
 * Bitnami (Windows & Mac) : [https://bitnami.com/stack/ruby/installer](https://bitnami.com/stack/ruby/installer)
 
-** Attention : ** il y a différentes versions de Ruby (1.9.3, 2.0.0 etc...) et de Rails. Nous utiliserons ici Ruby 2.0.0 et Rails 4.1. Votre version de rails et ruby n'est pas très grave, mais il est important d' **avoir la même version de Rails chez tous les étudiants d'un même groupe **
+**Attention :** il y a différentes versions de Ruby (1.9.3, 2.0.0 etc...) et de Rails. Nous utiliserons ici Ruby 2.0.0 et Rails 4.1. Votre version de rails et ruby n'est pas très grave, mais il est important d' **avoir la même version de Rails chez tous les étudiants d'un même groupe**
 
 
 ### Git & Github
