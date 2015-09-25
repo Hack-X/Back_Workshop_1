@@ -19,9 +19,7 @@ Dans ce premier atelier, nous utiliserons les technologies suivantes :
 
 ### Installation de Rails & Ruby
 
-* Bitnami : [https://bitnami.com/stack/ruby/installer](https://bitnami.com/stack/ruby/installer)
-* Windows : [http://railsinstaller.org/](http://railsinstaller.org/)
-* Mac : [https://github.com/tokaido/tokaidoapp](https://github.com/tokaido/tokaidoapp)
+* Bitnami (Windows & Mac) : [https://bitnami.com/stack/ruby/installer](https://bitnami.com/stack/ruby/installer)
 
 ** Attention : ** il y a différentes versions de Ruby (1.9.3, 2.0.0 etc...) et de Rails. Nous utiliserons ici Ruby 2.0.0 et Rails 4.1. Votre version de rails et ruby n'est pas très grave, mais il est important d' **avoir la même version de Rails chez tous les étudiants d'un même groupe **
 
@@ -47,7 +45,7 @@ Il vous faudra un IDE ou éditeur de code tout au long de ce cours. Le plus simp
 
 ### Avant de commencer
 
-Ouvrez un Terminal / une console, et pour tester que tout est installé vous pouvez réaliser ces petits tests:
+Ouvrez un Terminal / une console, et pour tester que tout est installé vous pouvez réaliser ces petits tests. Attention, si vous avez utilisé l'installation BitNami il faut lancer la `rubyconsole` BitNami qui est dans le dossier `rubystack` pour effectuer ces tests.
 
     $ git --version
     git version 1.9.3 (Apple Git-50)
