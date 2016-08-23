@@ -21,7 +21,7 @@ Dans ce premier atelier, nous utiliserons les technologies suivantes :
 
 * InsyallRails.com : [http://installrails.com/](http://installrails.com/). C'est un site qui vous explique pas à pas comment installer Rails sur la plupart des machines.
 
-**Attention :** il y a différentes versions de Ruby (1.9.3, 2.0.0 etc...) et de Rails. Nous utiliserons ici Ruby 2.0.0 et Rails 4.1. Votre version de rails et ruby n'est pas très grave, mais il est important d' **avoir la même version de Rails chez tous les étudiants d'un même groupe**
+**Attention :** il y a différentes versions de Ruby (1.9.3, 2.0.0 etc...) et de Rails. Nous utiliserons ici Ruby 2.0.0 et Rails 4.1. Votre version de rails et ruby n'est pas très grave, mais il est important d' **avoir la même version de Rails chez tous les étudiants d'un même groupe, et une version de Ruby > 2.0.0 ainsi qu'une version de Rails > 4.0.0 si possible**
 
 
 ### Git & Github
