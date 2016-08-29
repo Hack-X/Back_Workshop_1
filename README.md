@@ -3,25 +3,34 @@ Workshop X - Cours #1
 
 Objectifs de l'atelier :
 
-* Installer un environnement de développement pour la partie serveur (API)
+* Installer un environnement de développement pour la partie serveur et client.
 * Découvrir des tutoriaux
-* Réaliser un `Hello World !`
+* Réaliser un `Hello World !` en Rails
 
 Dans ce premier atelier, nous utiliserons les technologies suivantes :
 
 * Ruby
 * Rails (un framework basé sur Ruby)
+* NodeJS (uniquement l'installation)
+* Ionic & Cordova (uniquement l'installation)
 * Git
 
 
 # Installation de l'environnement de travail
 
+Nous allons commencer par installer l'environnement de travail qui servira à la fois à la partie front et à la partie back.
 
-### Installation de Rails & Ruby
 
-* InsyallRails.com : [http://installrails.com/](http://installrails.com/). C'est un site qui vous explique pas à pas comment installer Rails sur la plupart des machines.
+### Installation de Rails & Ruby (partie API / Backoffice)
+
+* InstallRails.com : [http://installrails.com/](http://installrails.com/). C'est un site qui vous explique pas à pas comment installer Rails sur la plupart des machines (ainsi que Git, Sublime et d'autres petits détails utiles).
 
 **Attention :** il y a différentes versions de Ruby (1.9.3, 2.0.0 etc...) et de Rails. Nous utiliserons ici Ruby 2.0.0 et Rails 4.1. Votre version de rails et ruby n'est pas très grave, mais il est important d' **avoir la même version de Rails chez tous les étudiants d'un même groupe, et une version de Ruby > 2.0.0 ainsi qu'une version de Rails > 4.0.0 si possible**
+
+### Installation de NodeJS, Cordova & Ionic
+
+* NodeJS : [https://nodejs.org/en/](https://nodejs.org/en/) Il suffit de télécharger et installer le package correspondant à votre OS / machine pour que ça fonctionne. ne vous inquiétez pas trop de la version précise ça ne change pas grand chose.
+* Cordova & Ionic : il suffit de lancer un terminal / console et de lancez la commande `npm install -g cordova ionic`. Idem, la version d'Ionic importe peu car nous réaliserons le projet avec Ionic 1.3 (et non la version 2), mais que l'on peut réaliser des projets Ionic 1.3 avec à la fois la version 2 et les précédentes.
 
 
 ### Git & Github
@@ -45,7 +54,7 @@ Il vous faudra un IDE ou éditeur de code tout au long de ce cours. Le plus simp
 
 ### Avant de commencer
 
-Ouvrez un Terminal / une console, et pour tester que tout est installé vous pouvez réaliser ces petits tests. Attention, si vous avez utilisé l'installation BitNami il faut lancer la `rubyconsole` BitNami qui est dans le dossier `rubystack` pour effectuer ces tests.
+Ouvrez un Terminal / une console, et pour tester que tout est installé vous pouvez réaliser ces petits tests (il ne faut pas taper le `$`, cela correspond à ce qu'on appelle le `prompt` et il peut varier en fonction de votre installation).
 
     $ git --version
     git version 1.9.3 (Apple Git-50)
@@ -53,7 +62,15 @@ Ouvrez un Terminal / une console, et pour tester que tout est installé vous pou
     ruby 2.0.0p481 (2014-05-08 revision 45883) [universal.x86_64-darwin14]
     $ rails --version
     Rails 4.1.6
-
+    $ node --version
+    v5.1.1
+    $ npm --version
+    3.10.6
+    $ cordova --version
+    6.2.0
+    $ ionic --version
+    2.0.0
+    
 
 Le test est validé si à chaque fois un numéro de version s'affiche (même si il n'est pas identique à celui présenté ici) et échoue si vous voyez une réponse du type `command not found`. Si c'est le cas assurez vous que vous n'avez pas oublié une des étapes décrites ci-dessus.
 
@@ -77,7 +94,7 @@ Pour Rubygems / Bundle, à tenter :
 	$ SET http_proxy=http://kuzh.polytechnique.fr:8080    // (sur windows)
 
 
-# Workshop
+# Workshop Back
 
 #### Etape 1 : Création d'un projet sur Github
 
